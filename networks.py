@@ -184,9 +184,3 @@ if __name__ == '__main__':
 
     summary(net,data)
     print("out size: {}".format(out.size()))
-
-
-
-
-
-

@@ -53,8 +53,3 @@ class Options():
         if opt.gpu_ids != '-1':
             os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpu_ids
         return opt
-
-
-
-
-
