@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+"""从真实采集的数据集提供的数据中处理获取fECG和混合信号(aECG)"""
 # import libraries
 import numpy as np
 import os

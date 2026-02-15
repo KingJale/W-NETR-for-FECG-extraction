@@ -1,5 +1,13 @@
 # -*- coding: utf-8 -*-
-
+"""处理pcdb数据集的数据，获取maECG
+    PCDB数据集简介：
+    核心信息：2013年心脏病学计算挑战赛公开数据集，专注于非侵入性胎儿心电信号。
+    数据内容：75组持续1分钟的孕妇腹部心电图记录，每组4个通道网页
+    技术规格：采样率1kHz，提供胎儿QRS（FQRS）参考位置注释
+    挑战背景：PhysioNet/Computing in Cardiology Challenge 2013竞赛数据集
+    主要用途：评估胎儿心电信号提取算法的性能，常用于机器学习模型测试
+    获取地址：PhysioNet平台（https://physionet.org/content/challenge-2013/
+"""
 # import libraries
 import numpy as np
 import os
