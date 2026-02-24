@@ -32,7 +32,7 @@ def cal_rms(amp):
 
 """# Load Dataset"""
 
-class Dataset(data.Dataset):
+class Dataset(data.Dataset):#也是获得训练集，但是获取到mECG
 
     def __init__(self, root='./', load_set='train', transform=None):
         self.root = root#os.path.expanduser(root)

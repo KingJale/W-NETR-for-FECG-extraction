@@ -21,7 +21,7 @@ from scipy.signal import butter, lfilter, filtfilt, find_peaks, savgol_filter
 import wfdb
 
 
-def butter_bandpass(lowcut, highcut, fs, order=5):
+def butter_bandpass(lowcut, highcut, fs, order=5):#根据低截止频率、高截止频率，采样频率、滤波器阶数求滤波器的关键参数
     nyq = 0.5 * fs
     low = lowcut / nyq
     high = highcut / nyq
@@ -29,7 +29,7 @@ def butter_bandpass(lowcut, highcut, fs, order=5):
     return b, a
 
 
-def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
+def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):#根据滤波器的关键参数对数据进行滤波
     b, a = butter_bandpass(lowcut, highcut, fs, order=order)
     y = filtfilt(b, a, data)
     return y
@@ -40,7 +40,7 @@ def cal_rms(amp):
 
 """# Load Dataset"""
 
-class Dataset(data.Dataset):
+class Dataset(data.Dataset):#数据集加载器（定义数据集）获取验证集
 
     def __init__(self, root='./', load_set='val', transform=None):
         self.root = root#os.path.expanduser(root)
@@ -55,7 +55,7 @@ class Dataset(data.Dataset):
         #if shuffle:
         #    random.shuffle(data)
 
-    def __getitem__(self, index):
+    def __getitem__(self, index):#获取aECG
         """
         Args:
             index (int): Index

@@ -47,7 +47,7 @@ def cal_rms(amp):
 
 """# Load Dataset"""
 
-class Dataset(data.Dataset):
+class Dataset(data.Dataset):#获取aECG,mECG和fECG生成训练集
 
     def __init__(self, root='./', load_set='train', transform=None):
         self.root = root   #os.path.expanduser(root)
