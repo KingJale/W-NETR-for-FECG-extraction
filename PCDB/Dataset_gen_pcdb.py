@@ -31,10 +31,10 @@ for kh in range(0,15):
 for kh in range(0,15):
     maECG_paths_val.append('PCDB/maECG/'+sub[0]+'_'+'IV'+'_'+str(kh))
 
-maECG_paths_val = np.array(maECG_paths_val)
-np.save('maECG_paths_val.npy',maECG_paths_val)
+maECG_paths_val = np.array(maECG_paths_val)#将列表转换成numpy数组
+np.save('maECG_paths_val.npy',maECG_paths_val)#将numpy数组保存为.npy二进制文件
 
-
+#为验证集准备数据集路径
 
 
 
